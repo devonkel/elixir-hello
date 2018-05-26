@@ -19,8 +19,10 @@ defmodule Hello.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
+  #    applications: [:cowboy, :plug],
       mod: {Hello.Application, []},
       extra_applications: [:logger, :runtime_tools]
+  #    extra_applications: [:logger, :runtime_tools, :cowboy, :plug]
     ]
   end
 
@@ -40,7 +42,8 @@ defmodule Hello.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:plug, "~> 1.4"}
     ]
   end
 
